@@ -7,9 +7,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def to_do():
-    author = "Me"
-    name = "You"
-    return render_template('index.html', author=author, name=name)
+    author = "Neal Rogers"
+    return render_template('index.html', author=author)
+
+@app.route('/submit', methods = ['POST'])
+def signup():
+    task = request.form['task']
+    priority = request.form['priority']
+    email = request.form['email']
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run()
