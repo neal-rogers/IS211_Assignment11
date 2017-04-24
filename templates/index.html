@@ -27,8 +27,17 @@
             <h1>To Do App</h1>
                 <form>
                     <form action="/signup" method="post">
-                      <input type="text" name="email"></input>
-                      <input type="submit" value="Signup"></input>
+                        Task:
+                      <input type="text" name="task"></input>
+                        Email:
+                      <input type="email" name="email"></input>
+                        Priority:
+                        <select name="Priority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                      <input type="submit" value="Add To Do Item"></input>
                     </form>
         </div>
 </body>
