@@ -5,13 +5,15 @@
 from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 
+tasks = []
+
 @app.route('/')
 def to_do():
     author = "Neal Rogers"
     return render_template('index.html', author=author)
 
 @app.route('/submit', methods = ['POST'])
-def signup():
+def add_task():
     task = request.form['task']
     priority = request.form['priority']
     email = request.form['email']

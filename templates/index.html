@@ -9,6 +9,7 @@
         * {
         font-family: sans-serif;
         background-color: #FFF;
+        margin: 0 auto;
         }
 
         body {
@@ -19,26 +20,45 @@
         font-size: 1.5em;
         }
 
+        table, th, td {
+        max-width: 33%;
+        border: 1px solid black;
+        padding: 1em;
+        }
+
         .container {
         }
 
     </style>
         <div class="container">
             <h1>To Do App</h1>
-                <form>
-                    <form action="/signup" method="post">
-                        Task:
-                      <input type="text" name="task"></input>
-                        Email:
-                      <input type="email" name="email"></input>
-                        Priority:
-                        <select name="Priority">
-                            <option value="low">Low</option>
-                            <option value="medium">Medium</option>
-                            <option value="high">High</option>
-                        </select>
-                      <input type="submit" value="Add To Do Item"></input>
-                    </form>
+                <form action="/signup" method="post">
+                    Task:
+                  <input type="text" name="task"></input>
+                    Email:
+                  <input type="email" name="email"></input>
+                    Priority:
+                    <select name="Priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                  <input type="submit" value="Add To Do Item"></input>
+                </form>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Task</td>
+                        <td>Email</td>
+                        <td>Priority</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </thead>
+            </table>
         </div>
 </body>
 </html>
